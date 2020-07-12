@@ -18,7 +18,7 @@ import json
 import requests
 from pprint import pprint
 
-txid = '' # Vindi coinjoin - "64fc239849af3b6789f3822034eff44479eca83045399409ef5667a5f2191b12"
+txid = '' # sample coinjoin - "ec28dcc449972aa6ff350dd4eec729d9bddea6a22367b274f6ad8287d0665368"
 
 def getOutspends():
 
@@ -35,7 +35,7 @@ def getOutspends():
         else:
             unspent.append(outspend)
 
-    """Note, another way to possibly ID common ownership of addresses is by unspent UTXOs, since almost all (235/238) are spent"""
+    """Note, another way to possibly ID common ownership of addresses is by unspent UTXOs, since almost all <redacted> are spent"""
 
     print("Unspent Indexes:", unspent)
     return txids
@@ -110,7 +110,7 @@ def main():
 
     print()
 
-    save_file = open("Vindi_CoinJoin.txt", "w")
+    save_file = open("Sample_CoinJoin.txt", "w")
 
     txids = getOutspends()
     outputsDict = getOutputAddrs()
