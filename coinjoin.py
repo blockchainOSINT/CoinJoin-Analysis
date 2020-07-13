@@ -12,7 +12,8 @@ output_format = { txid_0: {address_0 : btc_amnt,
 
 where: txids = every transactions that spent a CoinJoin UTXOs
        address = the CoinJoin output addresses from which each tx spent the UTXO
-       btc_amnt is the amount spent"""
+       btc_amnt = the amount spent from this address
+       total = the btc sum spent by this tx"""
 
 
 import json
