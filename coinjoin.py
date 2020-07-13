@@ -40,6 +40,7 @@ def getOutspends():
 
     print("Spent Outputs:", len(txids))
     print("Unspent Outputs:", len(unspent))
+
     return txids
 
 
@@ -124,10 +125,10 @@ def main():
     inputsDict = getInputAddrs(duplicatesDict)
     matchesDict = getMatches(outputsDict, inputsDict)
 
-    pretty_json = str(pprint(matchesDict))
+    print("\nTransactions with multiple spent outputs from this CoinJoin:\n")
+    pprint(matchesDict)
 
-    print(pretty_json, file = save_file)
-
+    save_file.write(str(matchesDict))
     save_file.close()
 
     print("\nFinished. Goodbye!\n\n")
