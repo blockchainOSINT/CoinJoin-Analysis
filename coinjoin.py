@@ -121,7 +121,7 @@ def main():
     save_file = open(f"{txid}_CoinJoin.txt", "w")
 
     txids = getOutspends()
-    print("\nAnalyzing Outspends...\n")
+    print("\nAnalyzing CoinJoin...\n")
     outputsDict = getOutputAddrs()
     duplicatesDict = getDuplicates(txids)
     inputsDict = getInputAddrs(duplicatesDict)
